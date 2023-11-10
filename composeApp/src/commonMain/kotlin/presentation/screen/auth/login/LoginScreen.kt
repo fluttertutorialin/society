@@ -32,6 +32,7 @@ import presentation.composable.SnackBarComposable
 import presentation.composable.TextButtonComposable
 import presentation.composable.TextFieldComposable
 import presentation.screen.auth.signup.RegistrationScreen
+import presentation.screen.home.HomeScreen
 import presentation.screen.main.MainContainer
 import resources.Resources
 import theme.Theme
@@ -50,7 +51,7 @@ class LoginScreen :
     ) {
         when (effect) {
             is LoginScreenUIEffect.NavigateToHome -> navigator.replaceAll(MainContainer)
-            LoginScreenUIEffect.NavigateToSignup -> navigator.push(RegistrationScreen())
+            LoginScreenUIEffect.NavigateToSignup -> navigator.push(MainContainer)
         }
     }
 
